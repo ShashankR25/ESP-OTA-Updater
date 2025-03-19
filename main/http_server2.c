@@ -126,6 +126,7 @@ esp_err_t http_server_OTA_update_handler(httpd_req_t *req)
 	int recv_len;
 	bool is_req_body_started = false;
 	bool flash_successful = false;
+	int barWidth = 50;
 
 	// Enable CORS by adding headers
     httpd_resp_set_hdr(req, "Access-Control-Allow-Origin", "*");
@@ -246,7 +247,21 @@ esp_err_t http_server_OTA_update_handler(httpd_req_t *req)
             return ESP_FAIL;
         }
 
-        printf("Received: %d/%d bytes\r", content_received + recv_len, content_length);
+        // printf("Received: %d/%d bytes\r", content_received + recv_len, content_length);
+		// Calculate the progress as a fraction
+        float progress = (float)content_received / content_length;
+        int pos = barWidth * progress;
+        
+        // Print the progress bar
+        printf("[");
+        for (int i = 0; i < barWidth; i++) {
+            if (i < pos)
+                printf("#");
+            else
+                printf(" ");
+        }
+        printf("] %3d%%\r", (int)(progress * 100));
+        fflush(stdout);  // Ensure the progress is printed immediately
 
         // Process header only for first received chunk
         if (!is_req_body_started) {
