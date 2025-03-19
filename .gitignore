@@ -1,0 +1,62 @@
+# Ignore build artifacts
+/build/
+*.bin
+*.elf
+*.map
+*.hex
+*.dump
+
+# Ignore SDK configuration backups
+sdkconfig.old
+sdkconfig.*
+
+# Ignore CMake cache and temporary files
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Ignore generated project files
+*.cproject
+*.project
+.settings/
+.vscode/
+*.code-workspace
+
+# Ignore log files and temporary files
+*.log
+*.bak
+*.swp
+*.tmp
+*.dmp
+*.DS_Store
+
+# Ignore dependency builds
+components/**/build/
+components/**/CMakeFiles/
+
+# Ignore debugging and core dump files
+core.*
+*.dmp
+
+# Ignore Python virtual environments and cache
+venv/
+.env/
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore ESP-IDF Tools and Dependencies
+.espressif/
+dist/
+tools/
+main/Kconfig.projbuild
+
+
+# Ignore secrets and credentials (if any)
+*.pem
+*.crt
+*.key
+*.json
+secrets/
