@@ -1,11 +1,25 @@
-ESP-IDF template app
-====================
+# ESP-OTA-Updater
 
-This is a template application to be used with [Espressif IoT Development Framework](https://github.com/espressif/esp-idf).
 
-Please check [ESP-IDF docs](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html) for getting started instructions.
+## Overview
+**ESP-OTA-Updater** is a lightweight, production-ready solution for performing Over-the-Air (OTA) firmware updates on ESP32 devices using the ESP-IDF framework. This project facilitates secure, reliable, and efficient remote firmware updates via HTTP POST requests.
 
-*Code in this repository is in the Public Domain (or CC0 licensed, at your option.)
-Unless required by applicable law or agreed to in writing, this
-software is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR
-CONDITIONS OF ANY KIND, either express or implied.*
+## Features
+- **HTTP-Based OTA Updates**: Seamlessly update firmware over HTTP connections.
+- **Secure and Reliable**: Ensures integrity and authenticity of firmware during updates.
+- **Efficient Performance**: Optimized for minimal downtime and resource usage during the update process.
+
+## Requirements
+- **Hardware**: ESP32 Development Board.
+- **Software**:
+  - [ESP-IDF Framework](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/get-started/) (version 4.x or later).
+  - [Python 3.x](https://www.python.org/downloads/) (required for ESP-IDF setup).
+  - [Git](https://git-scm.com/) (for version control).
+  - [CMake](https://cmake.org/) and [Ninja](https://ninja-build.org/) (build tools).
+
+## Getting Started
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/ShashankR25/ESP-OTA-Updater.git
+cd ESP-OTA-Updater
