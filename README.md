@@ -26,5 +26,5 @@ cd ESP-OTA-Updater
 ```
 ## Demo Video
 
-![Demo](docs\ESP-OTA-Updater.gif)
+![Demo](docs/ESP-OTA-Updater.gif)
 
