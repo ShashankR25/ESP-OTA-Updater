@@ -23,3 +23,8 @@
 ```bash
 git clone https://github.com/ShashankR25/ESP-OTA-Updater.git
 cd ESP-OTA-Updater
+```
+## Demo Video
+
+![Demo](docs\ESP-OTA-Updater.gif)
+
